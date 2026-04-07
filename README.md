@@ -1,4 +1,4 @@
-# ZenQuotes 'On This Date' API ( hereinafter referred to as "OTD") + API Request Plugin for Obsidian (hereinafter referred to as "APIR") = Daily Historical Events rendered on an Obsidian Daily Note #
+**ZenQuotes 'On This Date' API ( hereinafter referred to as "OTD") + API Request Plugin for Obsidian (hereinafter referred to as "APIR") = Daily Historical Events rendered on an Obsidian Daily Note**
 ## Inspiration ##
 - In my attempts to craft a daily note template that was both reflective and informative, I wanted to not only insert daily quotes, but also historical events.
 - The solution was found via [ZenQuotes](https://www.zenquotes.io).
