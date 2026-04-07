@@ -1,0 +1,7 @@
+> [!info]- ZenQuotesAPI-OTD
+> ```req
+> url: https://today.zenquotes.io/api
+> req-uuid: otd
+> auto-update
+> show: $.date
+> ```
