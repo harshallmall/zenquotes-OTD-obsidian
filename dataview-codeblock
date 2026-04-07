@@ -1,0 +1,23 @@
+```dataviewjs
+(async () => {
+  const TODAY = moment().format("YYYY-MM-DD");
+  const CACHE_KEY = "otd-" + TODAY;
+
+  for (const key of Object.keys(localStorage)) {
+    if (key.startsWith("otd-") && key !== CACHE_KEY) localStorage.removeItem(key);
+  }
+
+  if (!localStorage.getItem(CACHE_KEY)) {
+    const raw = localStorage.getItem("req-otd");
+    if (!raw) { dv.paragraph("Loading the ZenQuotes API Response..."); return; }
+    localStorage.setItem(CACHE_KEY, raw);
+  }
+
+  const { data } = JSON.parse(localStorage.getItem(CACHE_KEY));
+
+  const format = ({ text }) => text.replace(/\[\d+\]/g, '').trim();
+
+  dv.header(3, "Historical Events - On This Date");
+  dv.list(data.Events.map(format));
+})();
+```
